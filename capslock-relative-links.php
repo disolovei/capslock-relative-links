@@ -38,11 +38,8 @@ function cplck_replacer_home_url( $link ) {
 }
 
 if ( ! is_admin() ) {
-    add_filter( 'page_link', 'cplck_replacer_home_url' );
-    add_filter( 'attachment_link', 'cplck_replacer_home_url' );
-    add_filter( 'post_type_link', 'cplck_replacer_home_url' );
-    add_filter( 'term_link', 'cplck_replacer_home_url' );
     add_filter( 'wp_get_attachment_url', 'cplck_replacer_site_url' );
     add_filter( 'theme_root_uri', 'cplck_replacer_site_url' );
     add_filter( 'plugins_url', 'cplck_replacer_site_url' );
+    add_filter( 'home_url', 'cplck_replacer_home_url' );
 }
